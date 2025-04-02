@@ -12,7 +12,7 @@
 #
 
 # I recommend SSH connection. Example: git@github.com:jjpeleato/slides-starter-boilerplate.git
-GIT="git@github.com:jjpeleato/slides-security-wordpress.git"
+GIT="~"
 
 # Check Git uri is not empty.
 if [ "$GIT" = "~" ] ; then
