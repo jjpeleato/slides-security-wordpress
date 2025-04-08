@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="es-ES" prefix="og: https://ogp.me/ns#">
+	<head>
+		<!-- Assets -->
+		<meta charset="utf-8">
+		<meta name="robots" content="all">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- Title -->
+		<title>Seguridad en WordPress by @jjpeleato | Taller Congreso Web 2016</title>
+		<!-- Information -->
+		<meta name="description" content="Seguridad en WordPress by @jjpeleato | Taller Congreso Web 2016">
+		<meta name="author" content="@jjpeleato">
+		<!-- Datetime -->
+		<meta name="content_origin" content="2025-04-02">
+		<meta name="content_updated" content="2025-04-02">
+		<meta name="minor_updates" content="2025-04-02">
+		<!-- Social media -->
+		<meta property="og:locale" content="es_ES">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Seguridad en WordPress | Taller Congreso Web 2016">
+		<meta property="og:title" content="Seguridad en WordPress | Taller Congreso Web 2016">
+		<meta property="og:description" content="Seguridad en WordPress by @jjpeleato | Taller Congreso Web 2016">
+		<meta property="og:url" content="https://jjpeleato.com/courses/securitywordpress/">
+		<meta property="og:image" content="https://jjpeleato.com/courses/securitywordpress/image-share.png">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Seguridad en WordPress | Taller Congreso Web 2016">
+		<meta name="twitter:description" content="Seguridad en WordPress by @jjpeleato | Taller Congreso Web 2016">
+		<meta name="twitter:site" content="@jjpeleato">
+		<meta name="twitter:creator" content="@jjpeleato">
+		<meta name="twitter:image" content="https://jjpeleato.com/courses/securitywordpress/image-share.png">
+		<!-- Geolocation -->
+		<meta name="geo.region" content="ES-AR">
+		<meta name="geo.placename" content="Huesca">
+		<meta name="geo.position" content="42.131845;-0.407806">
+		<meta name="ICBM" content="42.131845, -0.407806">
+		<!-- Icons: .png or .ico -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<!-- Assets CSS -->
+		<link rel="stylesheet" href="assets/css/vendor/reset.css">
+		<link rel="stylesheet" href="assets/css/vendor/reveal.css">
+		<link rel="stylesheet" href="assets/css/vendor/white.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="assets/css/vendor/monokai.css">
+		<!-- Fontawesome-->
+		<link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+		<link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+		<link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+		<!-- Plus CSS-->
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body oncontextmenu="return true" onkeydown="return true">
+		<div class="reveal">
+			<div class="slides">
+				<!-- Workshop presentation -->
+				<section>
+					<section>
+						<h3>Taller #CW16 #WPS16</h3>
+						<h1>Seguridad en WordPress</h1>
+						<blockquote>"Porque la seguridad no sólo depende de WordPress, sino del que lo usa"</blockquote>
+					</section>
+					<section>
+						<h4>¡Hola y bienvenid@s!</h4>
+						<p>Mi nombre es <strong>José J. Peleato Pradel</strong>.</p>
+						<p><small>by <a href="https://www.jjpeleato.com/" target="_blank" title="JJPeleato">jjpeleato.com</a></small></p>
+					</section>
+				</section>
+
+				<!-- Security -->
+				<section>
+					<section>
+						<h3>¿Seguridad?</h3>
+						<p>Seguridad (del latín securitas) es definido como la cualidad de seguro. Ausencia de riesgo o la confianza en algo o en alguien.</p>
+					</section>
+					<section>
+						<h3>¿Seguridad de la información?</h3>
+						<p>Conjunto de medidas preventivas y reactivas de las organizaciones y de los sistemas tecnológicos que permiten resguardar y proteger la información buscando mantener la confidencialidad, la disponibilidad, integridad y autenticación (autentificación) de la misma.</p>
+					</section>
+					<section>
+						<p>El concepto de seguridad de la información no debe ser confundido con el de seguridad informática, ya que este último solo se encarga de la seguridad en el medio informático, pero la información puede encontrarse en diferentes medios o formas, y no solo en medios informáticos.</p>
+					</section>
+					<section>
+						<h3>¿Seguridad informática?</h3>
+						<p>Más conocido cómo ciberseguridad o seguridad de tecnologías de la información, es definido como el área de la informática que se enfoca en la protección de la infraestructura computacional y su almacenamiento (información), para garantizar su confidencialidad, integridad y disponibilidad.</p>
+					</section>
+					<section>
+						<h4>Oficina de Seguridad del Internauta</h4>
+						<a rel="nofollow" href="https://www.osi.es" target="_blank" title="Oficina de Seguridad del Internauta">https://www.osi.es</a>
+						<blockquote>"El objetivo de la seguridad informática consiste en minimizar los riesgos en una infraestructura computacional"</blockquote>
+					</section>
+				</section>
+
+				<!-- Threats  -->
+				<section>
+					<section>
+						<h3>Amenazas</h3>
+						<p>Existen varios tipos de amenazas, debido a que no solo son amenazas las que surgen de la programación y el funcionamiento de un dispositivo de almacenamiento, también hay otras circunstancias que deben ser tomadas en cuenta e incluso “no informáticas”. Muchas son a menudo imprevisibles o inevitables.</p>
+					</section>
+					<section>
+						<h3>Tipos de amenaza</h3>
+						<p><strong>Existen infinidad de modos de clasificar un ataque y cada ataque puede recibir más de una clasificación.</strong></p>
+						<ul>
+							<li><strong>Amenazas por el origen:</strong> Amenazas que se originan a traves de la red externa o interna.</li>
+							<li><strong>Amenazas por el efecto:</strong> Amenaza que causa problemas a quien recibe los ataques, cómo robo de información, suplantación, manipulación, etc.</li>
+							<li><strong>Amenazas por el medio utilizado: Modus operandi</strong> del atacante, a tráves de virus, phising, ingeniería social, DDoS, etc.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Causas de amenaza</h3>
+						<ul>
+							<li>Usuarios o factor humano</li>
+							<li>Programas maliciosos</li>
+							<li>Errores de programación</li>
+							<li>Intrusos</li>
+							<li>Siniestro (Robo, incendio, inundación, ...)</li>
+							<li>Personal técnico interno (Disputas internas, problemas laborales, espionaje, ...)</li>
+							<li>Fallos electrónicos o lógicos de los sistemas informáticos en general.</li>
+							<li>Catástrofes naturales</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Crackers VS Hackers -->
+				<section>
+					<section>
+						<h3>Crackers vs Hackers</h3>
+						<blockquote>"El concepto de crackers y hackers no debe ser confundido, ya que su comportamiento y ética es diferente"</blockquote>
+					</section>
+					<section>
+						<h3>Crackers</h3>
+						<p>Término que hace referencia a las personas que “rompen” algún sistema de seguridad. Los crackers pueden estar motivados por una multitud de razones, incluyendo fines de lucro, protesta, o por el desafío. Acciones desautorizadas contra sistemas de seguridad.</p>
+					</section>
+					<section>
+						<h3>Hackers</h3>
+						<p>Termino que hace referencia a todo individuo que se dedica a programar de forma entusiasta, o sea un experto de cualquier tipo y que considera que poner la información al alcance de todos constituye un bien mayor.</p>
+					</section>
+					<section>
+						<p>La motivación de estas personas es desarrollar software en su tiempo y después distribuirlo de forma gratuita con la comunidad. También incluye a aquellos que encuentran, depuran y arreglan errores en los sistemas (vulnerabilidades).</p>
+					</section>
+				</section>
+
+				<!-- Malware -->
+				<section>
+					<section>
+						<h3>Malware</h3>
+						<p>Malicius software, también llamado, badware, código maligno, software malicioso o software malintencionado, es un tipo de software que tiene como objetivo infiltrarse o dañar una infraestructura computacional o sistema de información sin el consentimiento de su propietario.</p>
+						<blockquote>"Malware, no es lo mismo que software defectuoso"</blockquote>
+					</section>
+					<section>
+						<h3>Exploit</h3>
+						<p>Explotar o aprovechar, fragmento de software, fragmento de datos o secuencia de comandos y/o acciones, utilizada con el fin de aprovechar una vulnerabilidad de seguridad de un sistema de información para conseguir un comportamiento no deseado del mismo.</p>
+						<blockquote><small>Se considera exploit un ataque de ingeniera social, que consiste en convencer o sonsacar a una víctima cierta información.</small></blockquote>
+					</section>
+					<section>
+						<h3>Virus</h3>
+						<p>Un virus informático es un malware que tiene como objetivo el alterar el funcionamiento normal del ordenador, sin el permiso o el conocimiento del usuario.</p>
+						<blockquote><small>El primer virus de la historia atacó a un equipo IBM Serie 360. Fue llamado Creeper, creado en 1972. Este software creaba periódicamente en pantalla el mensaje “I’m a creeper… catch me if you can!” (Soy una enredadera… atrápame si puedes!). Para eliminar este problema se creó el primer programa antivirus denominado “Reaper” (Segador).</small></blockquote>
+					</section>
+					<section>
+						<h3>IWorm</h3>
+						<p>Malware que tiene la propiedad de duplicarse a sí mismo. Los gusanos se propagan de ordenador en ordenador, pero a diferencia de un virus, tiene la capacidad de propagarse sin la ayuda del factor humano. </p>
+					</section>
+					<section>
+						<blockquote><small>El primer gusano informático de la historia data de 1988, cuando el gusano Morris infectó una gran parte de los servidores y se dieron cuenta que los gusanos informáticos se reproducen asexualmente. Su creador, Robert Tappan Morris, fue sentenciado a tres años en prisión y obtuvo libertad condicional, 400 horas de servicios a la comunidad y una multa de 10.050 dólares, gracias a su familia que pagó la fianza. Fue este hecho el que alertó a las principales empresas involucradas en la seguridad de tecnologías tales como Nirdesteam que fue uno de los primeros en desarrollar el primer cortafuegos (firewall).</small></blockquote>
+					</section>
+					<section>
+						<h3>Trojan Horse</h3>
+						<p>Troyano o caballo de Troya, es un software malicioso que se presenta al usuario como un programa aparentemente legitimo e inofensivo, pero que, al ejecutarlo, le brinda al atacante acceso remoto al equipo infectado con todos sus privilegios.</p>
+						<p>Un troyano no es un virus informático. La diferencia consiste en su finalidad.</p>
+						<blockquote><small>En sus origines fueron utilizados como arma de sabotaje por los servicios de inteligencia como la CIA, cuyo caso más emblemático fue el sabotaje al gasoducto Siberiano en 1982.</small></blockquote>
+					</section>
+					<section>
+						<h3>Backdoor</h3>
+						<p>Puerta trasera es una secuencia especial dentro del código de programación, mediante la cual se pueden evitar los sistemas de seguridad del algoritmo (autentificación) para acceder al sistema.</p>
+					</section>
+					<section>
+						<h3>Rootkits</h3>
+						<p>Un rootkit consiste en un acceso de privilegio continuo a un ordenador pero que mantiene su presencia oculta al control de los administradores al corromper el funcionamiento normal del sistema operativo o de otras aplicaciones.</p>
+					</section>
+					<section>
+						<h3>Keyloggers</h3>
+						<p>Tipo de software o dispositivo hardware especifico que se encarga de registrar las pulsaciones que se realizan en el teclado, para posteriormente almacenar la información en un archivo o ser enviadas a través de Internet.</p>
+					</section>
+					<section>
+						<h3>Adware</h3>
+						<p>Sistemas de publicidad basados en programación computacional. Un programa de clase adware es cualquier programa que automáticamente muestra u ofrece publicidad web ya sea incrustada en una página web mediante gráficos, carteles, ventanas flotantes o durante la instalación de algún programa al usuario con el fin de generar lucro a sus autores.</p>
+					</section>
+					<section>
+						<h3>Spyware</h3>
+						<p>Programa espía que consiste en un malware que recopila información de un ordenador y después transmite esta información a una entidad externa sin el conocimiento del propietario del ordenador.</p>
+					</section>
+					<section>
+						<h3>Crimeware</h3>
+						<p>Tipo de software diseñado para la ejecución de delitos financieros en entornos en línea.</p>
+						<p>Diseñado mediante técnicas de ingeniera social para generar fraude en línea, con el fin de conseguir el robo de identidades para acceder a los datos de usuario de las cuentas de compañías de servicios financieros.</p>
+					</section>
+					<section>
+						<h3>SQL Injection</h3>
+						<p>Método de infiltración de código que se vale de una vulnerabilidad informática presente en una aplicación en el nivel de validación de entradas para realizar operaciones sobre una base de datos.</p>
+						<pre><code>SELECT * FROM user WHERE name = '" + nombreUsuario + "';</code></pre>
+						<pre><code>SELECT * FROM user WHERE name = 'jjpeleato';</code></pre>
+						<pre><code>SELECT * FROM user WHERE name = 'jjpeleato';DROP TABLE user;SELECT * FROM record WHERE name LIKE '%';</code></pre>
+					</section>
+					<section>
+						<h3>XSS</h3>
+						<p>Cross-site scripting es un tipo de inseguridad informática o agujero de seguridad típico en las aplicaciones Web.</p>
+						<p>Permite a una tercera persona inyectar en páginas web visitadas por el usuario código JavaScript o en otro lenguaje de script.</p>
+						<pre><code>http://www.example.com/home.php?frame=menu.php</code></pre>
+						<pre><code>javascript:while(1)alert("Mensaje infinito");</code></pre>
+					</section>
+					<section>
+						<h3>DdoS</h3>
+						<p>DoS (Denial of Service) o DDoS (Distributed Denial of Service (Ataques de denegación de servicios).</p>
+						<p>Consiste en un ataque a un sistema (ordenadores, servidores o red) que causa que un servicio o recurso sea inaccesible a los usuarios.</p>
+						<blockquote><small>Anonymous utiliza mucho este recurso para realizar sus ataques contra sus objetivos.</small></blockquote>
+					</section>
+					<section>
+						<h3>Botnet</h3>
+						<p>Termino que hace referencia a un conjunto o red de robots informáticos o bots, que se ejecutan de manera autónoma y automática. El atacante puede controlar todos los ordenadores/servidores infectados de forma remota.</p>
+						<p>Usos habituales:</p>
+						<ul>
+							<li>Ataques de denegación de servicios</li>
+							<li>Envío de SPAM</li>
+							<li>Minería de Bitcoins (criptomoneda)</li>
+							<li>Robo de Bitcoins</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Logic Bomb</h3>
+						<p>Parte de código insertado intencionalmente en un programa informático que permanece oculto hasta cumplirse una o más condiciones preprogramadas, en ese momento se ejecuta una acción maliciosa.</p>
+					</section>
+					<section>
+						<h3>Pharming</h3>
+						<p>Explotación de una vulnerabilidad en el software de los servidores DNS (Domain Name System) o en el de los equipos propios de los usuarios, que permite a un atacante redirigir un nombre de dominio a otra dominio distinto.</p>
+					</section>
+					<section>
+						<h3>Phising</h3>
+						<p>Suplantación de identidad, termino informático que denomina un modelo de abuso informático y que se comete mediante el uso de un tipo de ingeniería social, caracterizado por intentar adquirir información confidencial (contraseñas, número de tarjetas de crédito, información bancaria, etc.) de forma fraudulenta.
+						</p>
+						<blockquote><small>El método más conocido es suplantar un correo electrónico y redirigir mediante pharming a la víctima para reinicie la contraseña en una página anzuelo.</small></blockquote>
+					</section>
+					<section>
+						<h3>Spoofing</h3>
+						<p>Modificación y falsificación de los paquetes enviados en una comunicación para suplantar la identidad y descifrar información confidencial como claves privadas para autentificaciones contra servicios o servidores.</p>
+					</section>
+				</section>
+
+				<!-- WordPress -->
+				<section>
+					<section>
+						<h3>WordPress</h3>
+						<p>WordPress, es un sistema de gestión de contenidos que ha alcanzado una gran relevancia con una cuota del 30.6% de uso a nivel mundial, 1 de cada 4 páginas web esta creada en WordPress.</p>
+						<p>Dada la importancia de ser una de las plataformas más utilizadas, a diario se convierte en objetivo de múltiples ciberataques.</p>
+						<p>Ver estadísticas <a rel="nofollow" href="https://goo.gl/OvTxqJ" target="_blank" title="W2Techs">W2Techs</a></p>
+					</section>
+					<section>
+						<h3>Estructura base de datos</h3>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/bbdd.jpg" title="Estructura base de datos" alt="Estructura base de datos" />
+					</section>
+					<section>
+						<h3>Estructura base de datos</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Tabla</th>
+									<th>Definición</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>wp_commentmeta</td>
+									<td>Meta datos que incorporan cada comentario almacenado en wp_comments.</td>
+								</tr>
+								<tr>
+									<td>wp_comments</td>
+									<td>Almacenamiento de comentarios.</td>
+								</tr>
+								<tr>
+									<td>wp_links</td>
+									<td>Información relativa a los enlaces añadidos en la funcionalidad de enlaces de WordPress. Obsoleta actualmente.</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Estructura base de datos</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Tabla</th>
+									<th>Definición</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>wp_options</td>
+									<td>Almacenamiento de todos los ajustes de configuración de WordPress y plugins gestionado a través del panel de administración.</td>
+								</tr>
+								<tr>
+									<td>wp_postmeta</td>
+									<td>Meta datos que incorporan cada posts almacenado en wp_posts.</td>
+								</tr>
+								<tr>
+									<td>wp_posts</td>
+									<td>Almacenamiento de entradas, páginas y elementos de menú.</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Estructura base de datos</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Tabla</th>
+									<th>Definición</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>wp_termmeta</td>
+									<td>Meta datos que incorporan cada categoría/etiqueta.</td>
+								</tr>
+								<tr>
+									<td>wp_terms</td>
+									<td>Almacenamiento de categorías, tanto de las entradas como de enlaces y las etiquetas de las entradas.</td>
+								</tr>
+								<tr>
+									<td>wp_term_relationships</td>
+									<td>Asociación de las entradas y enlaces que hacen referencia a categorías y/o etiquetas.</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Estructura base de datos</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Tabla</th>
+									<th>Definición</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>wp_term_taxonomy</td>
+									<td>Describe la taxonomía (categoría, enlace o etiqueta) de cada línea de la tabla wp_terms.</td>
+								</tr>
+								<tr>
+									<td>wp_usermeta</td>
+									<td>Almacenamiento de la información denominada data que cada usuario contiene.</td>
+								</tr>
+								<tr>
+									<td>wp_users</td>
+									<td>Lista de usuarios.</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Estructura directorios</h3>
+						<img class="height-450" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/directory.jpg" title="Estructura directorios" alt="Estructura directorios" />
+					</section>
+					<section>
+						<h3>Estructura directorios</h3>
+						<p>La estructura de archivos y carpetas de una instalación WordPress es muy sencilla. Consta de tres carpetas principales: wp-admin, wp-content y wp-includes y el conjunto de archivos de la carpeta raíz y subdirectorios, de los cuales destacamos los ficheros wp-config.php y .htaccess situados en el directorio base.</p>
+					</section>
+					<section>
+						<h3>wp-admin</h3>
+						<p>Directorio donde se almacena los ficheros de backend del core de WordPress.</p>
+					</section>
+					<section>
+						<h3>wp-content</h3>
+						<p>Directorio donde se almacenan los contenidos específicos de nuestro proyecto.</p>
+					</section>
+					<section>
+						<h3>plugins</h3>
+						<p>Directorio donde se almacenan los plugins de terceros.</p>
+					</section>
+					<section>
+						<h3>themes</h3>
+						<p>Directorio donde se almacenan los themes que hay en nuestra aplicación. Puedes haber un número indeterminado de themes pero solo uno de ellos estará activo. Existe la metodología de trabajo basada en una estructura de theme padre y theme hijo (usando el hijo como theme activo).</p>
+					</section>
+					<section>
+						<h3>uploads</h3>
+						<p>Directorio principal donde se almacenan todos los ficheros que se suban a la aplicación. Es el único directorio que va a tener permisos de escritura.</p>
+					</section>
+					<section>
+						<h3>wp-includes</h3>
+						<p>Directorio principal core de WordPress.</p>
+					</section>
+					<section>
+						<h3>wp-config.php</h3>
+						<p>Fichero de configuración de WordPress, donde se almacenan las credenciales para conectar contra la base de datos, sistema de autentificación Uniques Keys y Salts, pefijo de las tablas de las base de datos, WordPress Debug, etc.</p>
+						<p>Recomendado tener permisos de solo escritura 444.</p>
+					</section>
+					<section>
+						<h3>.htaccess</h3>
+						<p>Fichero de configuración de servidor, que genera WordPress de forma automática con la instalación de la aplicación. Tiene como función mejorar la seguridad de WordPress. Ciertos plugins escriben en este fichero para aplicar seguridad u optimización al sitio web.</p>
+						<p>Recomendado tener permisos de solo escritura 444.</p>
+					</section>
+				</section>
+
+				<!-- Joke -->
+				<section data-background="https://media.giphy.com/media/htGK6VRvTT0Xu/giphy.gif">
+					<h2 class="text-white">¿Fin de la teoría?</h2>
+					<h2 class="text-white">... no me lo creo!</h2>
+				</section>
+
+				<!-- Good practise -->
+				<section>
+					<section>
+						<h3>Buenas prácticas</h3>
+						<p>Siempre existe un riesgo. Nada garantiza que sea 100% seguro. Y a lo que te preguntaras “Si nunca voy a estar seguro ¿entonces para qué hacer algo?”.</p>
+						<p>Lo que se trata con las buenas prácticas es minimizar el riesgo, blindar WordPress.</p>
+						<blockquote>La seguridad en WordPress depende en cómo se ha instalado y configurado.</blockquote>
+					</section>
+					<section>
+						<h3>Hosting confiable</h3>
+						<p>Uno de los pasos más importantes es elegir un buen proveedor de alojamiento web.</p>
+						<p>Es recomendable buscar una solución que encaje dentro de nuestra horquilla de presupuesto, pero sin olvidar contratar un servicio con buenas políticas de seguridad y backups.</p>
+					</section>
+					<section>
+						<h3>Copias de seguridad</h3>
+						<p>Debemos crear un procedimiento de forma manual o a través de plugins y crear un sistema de backups semanal.</p>
+						<p>Plugins recomendados:</p>
+						<ul>
+							<li>All-in-one WP Migration</li>
+							<li>WP Migrate DB</li>
+							<li>BackWPUP</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Usuario bases de datos</h3>
+						<p>Un usuario solo puede tener permisos de interactuar con la base de datos que trabajamos en nuestro proyecto WordPress y no tener acceso a ninguna más.</p>
+						<blockquote>Utilización de un único usuario por base de datos y sitio.</blockquote>
+						<blockquote>Uso de contraseñas robustas</blockquote>
+					</section>
+					<section>
+						<h3>Instalación WordPress subdirectorio</h3>
+						<p>WordPress permite tener la instalación en un subdirectorio y trabajar desde la URL del dominio.</p>
+					</section>
+					<section>
+						<h3>Eliminar objetos</h3>
+						<p>Es muy peligroso tener instalados plugins y temas inactivos. Cada tema o plugin puede llegar a ser una nueva puerta de acceso. Cuantos más haya, mas tendremos que supervisar. Y por lo tanto, aumenta la posibilidad de vulnerabilidades.</p>
+						<ul>
+							<li>Eliminar todos los plugins innecesarios.</li>
+							<li>Eliminar todos los plugins no activos.</li>
+							<li>Eliminar todos los temas no activos.</li>
+							<li>Eliminar fichero readme.html en la carpeta raíz.</li>
+							<li>Eliminar etiquetas generadas por WordPress en la etiqueta < head></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Eliminar objetos etiqueta < head></h3>
+						<p>Insertar contenido en el fichero <strong>functions.php</strong> del theme activo.</p>
+						<pre><code>remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);</code></pre>
+					</section>
+					<section>
+						<h3>Ocultar directorio plugins</h3>
+						<p>Es recomendado ocultar los directorios de los plugins, dado que a través de la ruta http://www.example.com/wp-content/plugin/nombre_plugin podemos ver la estructura del esqueleto de estos mismos.</p>
+						<p>Para evitar este problema solo es necesario crear/copiar un fichero index.php tal y como tenemos en la carpeta raíz de plugins o themes.</p>
+					</section>
+					<section>
+						<h3>wp-config.php</h3>
+						<p>Modificar prefijo "wp_" en el proceso de instalación para la creación de tablas en la base de datos.</p>
+						<img class="img-500" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/bbdd-good-practise.png" title="Modificar prefijo" alt="Modificar prefijo" />
+					</section>
+					<section>
+						<h3>Fijar valores AUTH/SALT</h3>
+						<p>Modificar los valores AUTH/SALT en el fichero wp-config.php</p>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/auth-salt.png" title="Fijar valores AUTH/SALT" alt="Fijar valores AUTH/SALT" />
+						<p>Modificar siempre valores AUTH/SALT si existe alguna vulnerabilidad en nuestra página web.</p>
+					</section>
+					<section>
+						<h3>.htaccess</h3>
+						<p>Fichero de configuración de servidor, que genera WordPress de forma automática con la instalación de la aplicación.</p>
+						<p>Tiene como función mejorar la seguridad de WordPress. Ciertos plugins escriben en este fichero para aplicar seguridad u optimización al sitio web.</p>
+					</section>
+					<section>
+						<h3>Configurar .htaccess</h3>
+						<pre><code># Proteger fichero wp-config.php
+&lt;files wp-config.php>
+	order allow,deny
+	deny from all
+&lt;/files>
+
+# Proteger fichero .htaccess
+&lt;files .htaccess>
+	order allow,deny
+	deny from all
+&lt;/files></code></pre>
+					</section>
+					<section>
+						<h3>Permisos directorios y archivos</h3>
+						<p>Es muy importante definir los permisos de escritura, lectura y ejecución en el sitio web.</p>
+						<p>Lo que nos recomienda WordPress:</p>
+						<ul>
+							<li><strong>Archivos – Permisos 644</strong></li>
+							<li><strong>Directorios – Permisos 755</strong></li>
+						</ul>
+						<p>Lo que te recomiendo:</p>
+						<ul>
+							<li><strong>wp-config.php – Permisos 444</strong></li>
+							<li><strong>.htaccess – Permisos 444</strong></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Actualizaciones</h3>
+						<p>Una versión obsoleta, es síntoma de un fallo de seguridad o algún otro bug, además, no solo WordPress, sino también los plugins y los temas tienen que actualizarse, ya que también pueden tener algún fallo de seguridad.</p>
+						<blockquote>Si no estás utilizando un theme o plugin y lo tienes desactivado, eso no significa que estés libre de amenaza.</blockquote>
+					</section>
+					<section>
+						<h3>Recursos web</h3>
+						<p><a rel="nofollow" href="http://www.wpdoctor.es/" target="_blank" title="wpdoctor">http://www.wpdoctor.es</a></p>
+					</section>
+					<section>
+						<h3>Plugins de seguridad</h3>
+						<p>Practica obligatoria. Instalar cualquiera de los siguientes plugins de Seguridad WordPress, que proporcionan una capa extra de protección a tu web.</p>
+						<ul>
+							<li>Wordfence Security</li>
+							<li>iThemes Security</li>
+							<li>All in one WP Security & Firewall</li>
+							<li>Sucuri Security</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Usuarios</h3>
+						<p>El sistema de usuarios de WordPress, es un sistema complejo en programación pero sencillo en su gestión.</p>
+						<blockquote>NO dar permisos sobredimensionados a usuarios que solo desempeñan papel de editor.</blockquote>
+					</section>
+					<section>
+						<h3>Usuarios: Panel de administración</h3>
+						<ul>
+							<li><strong>Nombre de usuario</strong>: No editable. Nombre de usuario para hacer login en la aplicación. Corresponde a user_login en la tabla wp_users.</li>
+							<li><strong>Alias: Nick del usuario</strong>. Corresponde a un meta dato almacenado en la tabla wp_usermeta compuesto por meta_key con el valor nickname como valor llave y meta_value con el valor introducido por el usuario.</li>
+							<li><strong>Mostrar este nombre públicamente</strong>: Corresponde a display_name en la tabla wp_users.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Usuarios: wp_users</h3>
+						<ul>
+							<li><strong>user_login</strong>: Editable desde base de datos. Usuario login. Corresponde al Nombre de usuario</li>
+							<li><strong>user_nicename</strong>: Editable desde base de datos. Nombre utilizado en la URL para visualizar todos los post de un autor. Obligatorio ser diferente a user_login. No se visualiza desde el panel de administración.</li>
+							<li><strong>display_name</strong>: Nombre utilizado para mostrar públicamente en la página web. Corresponde a mostrar este nombre públicamente.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Eliminar/Editar usuario admin o administrador.</h3>
+						<p>Es una práctica no recomendada el uso de un nombre común como acceso a la aplicación, nombres como admin, Admin, administrador, root, etc son nombres que nunca se han de utilizar, ya que son los primeros que comprobara un cracker mediante ataques de fuerza bruta.</p>
+					</section>
+					<section>
+						<h3>Editar user_login y user_nicename con nombres diferentes</h3>
+						<p>Mediante técnicas de escáner contra un proyecto WordPress si un usuario modifica el Alias o Mostrar este nombre públicamente con un nombre diferente al usuario de login, no evitamos que puedan encontrar nuestro nombre de acceso, ya que user_nicename mantendrá el mismo nombre.</p>
+					</section>
+					<section>
+						<p>user_login: c2Ia_jjpeleato</p>
+						<p>user_nicename: jjpeleato</p>
+						<p>Alias (Zona administración): jjpeleato</p>
+						<p>display_name: jjpeleato</p>
+					</section>
+					<section>
+						<h3>Registro de usuarios</h3>
+						<p>Si se permiten los registros de usuario se debe proteger contra los usuarios que se registrar masivamente para intentar acceder a su configuración, añadir comentarios spam o incluso inyectar malware.</p>
+						<p>Para detectar y eliminar la amenaza de sploggers una correcta práctica es la instalación del plugin.</p>
+						<p>WangGuard: <a rel="nofollow" href="https://wordpress.org/plugins/wangguard/" target="_blank" title="wangguard plugin">https://wordpress.org/plugins/wangguard/</a></p>
+					</section>
+					<section>
+						<h3>Contraseñas</h3>
+						<p>Brute force o ataque de fuerza bruta es un método utilizado para obtener contraseñas. Consiste en ir probando diferentes combinaciones comunes hasta dar con la correcta. Si utilizas contraseñas poco seguras como “123456”, “admin”, etc o contraseñas con relación a tu vida, con ataques de fuerza bruta e ingeniería social las probabilidades de que consigan obtener tu contraseña son altas.</p>
+					</section>
+					<section>
+						<p>Utiliza contraseñas de 9 caracteres como mínimo, recomendable 12. Nunca utilices la misma contraseña en más de una web y utiliza combinaciones de números, letras minúsculas, mayúsculas y caracteres especiales. Además nunca utilices contraseñas que tengan relación con tu vida.</p>
+					</section>
+					<section>
+						<h3>Recursos web</h3>
+						<p><a rel="nofollow" href="http://www.clavesegura.org/" target="_blank" title="Clave segura">http://www.clavesegura.org/</a></p>
+						<p><a rel="nofollow" href="https://howsecureismypassword.net/" target="_blank" title="howsecureismypassword">https://howsecureismypassword.net/</a></p>
+					</section>
+					<section>
+						<h3>Recursos apps</h3>
+						<p><a rel="nofollow" href="https://lastpass.com/" target="_blank" title="lastpass">https://lastpass.com/</a></p>
+						<p><a rel="nofollow" href="http://keepass.info/" target="_blank" title="keepass">http://keepass.info/</a></p>
+					</section>
+					<section>
+						<h3>Phising</h3>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Q17yhbmmux8" frameborder="0" allowfullscreen></iframe>
+					</section>
+					<section>
+						<h3>Login: Desactivar errores</h3>
+						<p>Anular los errores de la página de Login y mostrar cualquier mensaje informativo genérico, de esta forma evitamos que WordPress de información importante, como que el ERROR: Nombre de usuario inválido o ERROR: La contraseña que introdujo para el usuario “x” no sea correcta.</p>
+						<pre><code>function login_errors_message() {
+	return 'Error: Nombre de usuario o contraseña incorrectos';
+}
+add_filter('login_errors', 'login_errors_message');</code></pre>
+					</section>
+					<section>
+						<h3>Login: Limitar accesos</h3>
+						<p>Inhabilitar el registro de usuarios, añadir un sistema de comprobación humano como reCaptcha o WP Captcha e instalar un plugin para evitar y bloquear acceso masivos como Limit login attempts.</p>
+						<p>Limit Login Attempts: <a rel="nofollow" href="https://es.wordpress.org/plugins/wp-limit-login-attempts/" target="_blank" title="wp-limit-login-attempts plugin">https://es.wordpress.org/plugins/wp-limit-login-attempts/</a></p>
+						<p>WP Captcha: <a rel="nofollow" href="https://es.wordpress.org/plugins/wp-captcha/" target="_blank" title="wp-captcha plugin">https://es.wordpress.org/plugins/wp-captcha/</a></p>
+					</section>
+					<section>
+						<h3>Cambiar URL login</h3>
+						<p>Por defecto, WordPress dispone de un sistema de rutas de login para acceder al panel de administración http://example.com/wp-admin y accedes a través de http://example.com/wp-login.php</p>
+						<p>Rename wp-login.php: <a rel="nofollow" href="https://wordpress.org/plugins/rename-wp-login/" target="_blank" title="rename-wp-login plugin">https://wordpress.org/plugins/rename-wp-login/</a></p>
+					</section>
+					<section>
+						<h3>SPAM</h3>
+						<p>Una de las tareas habituales de cualquier administrador de un gestor de contenidos es controlar el SPAM en los comentarios. Evitar contenido innecesario, enlaces no deseados y posible inyección de código.</p>
+						<p>Plugins recomendados:</p>
+						<ul>
+							<li>WP Captcha</li>
+							<li>WP-SpamShield Anti-Spam</li>
+							<li>Akismet</li>
+						</ul>
+					</section>
+					<section>
+						<h3>PingBack</h3>
+						<p>Agregar en el fichero .htaccess</p>
+						<pre><code># Proteger XMLRPC
+&lt;Files xmlrpc.php>
+	Order Deny,Allow
+	Deny from all
+&lt;/Files>
+#END Proteger XMLRPC</code></pre>
+						<p>Eliminar el archivo xml-rpc.php de la carpeta raíz.</p>
+					</section>
+					<section>
+						<h3>HTML</h3>
+						<p>Prevenir y desactivar el código HTML en los comentarios. No borra el código, sino que lo procesa para que no se ejecute.</p>
+						<pre><code>add_filter('pre_comment_content', 'wp_specialchars');</code></pre>
+					</section>
+					<section>
+						<h3>Google Search Console </h3>
+						<p>Dar de alta tu sitio en la aplicación Google Search Console para que Google te informe de:</p>
+						<ul>
+							<li>Inyecciones de código</li>
+							<li>Avisos de problemas de usabilidad</li>
+							<li>Problemas de velocidad</li>
+							<li>Enlaces maliciosos</li>
+							<li>Paginas no encontradas</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Joke -->
+				<section data-background="https://media.giphy.com/media/D12CsrRNv7gL6/giphy.gif">
+					<p class="h2">¿Tod@s bien?</p>
+				</section>
+
+				<!-- WordPress instalattion -->
+				<section>
+					<h3>Instalación WordPress</h3>
+					<p>Instalación desde 0 y backup</p>
+					<a href="#" title="Documento eliminado">jjpeleato.com/download/wp_install.pdf</a>
+				</section>
+
+				<!-- Requirements clean WordPress -->
+				<section>
+					<h3>Limpiar WordPress</h3>
+					<ul>
+						<li>Acceso FTP a tu servidor o a un administrador de ficheros como cPanel</li>
+						<li>Acceso a la herramienta de gestión MySQL o a una interfaz de administración desde página web como phpMyAdmin</li>
+						<li>Editor de texto avanzado: Notepad++ o Sublime</li>
+						<li>
+							<p>Instalación entorno AMP en local.</p>
+							<ul>
+								<li>https://www.apachefriends.org/es/index.html</li>
+								<li>http://www.wampserver.com/en/</li>
+								<li>https://bitnami.com/stack/wordpress</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Clean WordPress -->
+				<section>
+					<section>
+						<h3>Página en mantenimiento</h3>
+						<p>Poner sitio web en modo mantenimiento. Una vez que dispongamos de una copia de seguridad con la última versión, eliminamos todo el proyecto y base de datos.</p>
+						<blockquote>Descargar todo el código y exportar base de datos.</blockquote>
+					</section>
+					<section>
+						<p>Crear fichero 503.php</p>
+						<pre><code>&lt;?php
+header("HTTP/1.1 503 Service Temporarily Unavailable");
+header("Status: 503 Service Temporarily Unavailable");
+header("Retry-After: 3600");
+?>
+&lt;html>
+	<h1>Página web en mantenimiento</h1>
+&lt;/html></code></pre>
+					</section>
+					<section>
+						<p>Crear fichero .htaccess</p>
+						<pre><code>RewriteEngine on
+RewriteCond %{REMOTE_ADDR} !^111\.111\.111\.111
+RewriteCond %{REQUEST_URI} !/503.php$ [NC]
+RewriteRule .* /503.php [R=302,L]</code></pre>
+					</section>
+					<section>
+						<h3>Reiniciar contraseñas</h3>
+						<ul>
+							<li>Modificar contraseñas a todos los usuarios administradores.</li>
+							<li>Modificar contraseña acceso panel de control hosting.</li>
+							<li>Modificar contraseña cuenta FTP.</li>
+							<li>Modificar contraseña usuario base de datos.
+								<ul>
+									<li>Al modificar la contraseña de la base de datos será necesario cambiarla inmediatamente en el fichero wp-config.php</li>
+								</ul>
+							</li>
+							<li>Cambiar claves de autentificación de WordPress (AUTH/SALT)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Copia de seguridad</h3>
+						<p>Si disponemos de una copia de seguridad estable y con la mínima perdida de información. La opción más rápida y a la vez segura, es restaurar WordPress desde la copia de seguridad.</p>
+					</section>
+					<section>
+						<h3>Base de datos: wp_options</h3>
+						<pre style="font-size: 15px;"><code>SELECT *
+FROM wp_options
+WHERE (
+	option_id LIKE '%base64_decode%'
+	OR option_name LIKE '%base64_decode%'
+	OR option_value LIKE '%base64_decode%'
+	OR autoload LIKE '%base64_decode%'
+	OR option_id LIKE '%edoced_46esab%'
+	OR option_name LIKE '%edoced_46esab%'
+	OR option_value LIKE '%edoced_46esab%'
+	OR autoload LIKE '%edoced_46esab%'
+	OR option_name LIKE 'wp_check_hash'
+	OR option_name LIKE 'class_generic_support'
+	OR option_name LIKE 'widget_generic_support'
+	OR option_name LIKE 'ftp_credentials'
+	OR option_name LIKE 'fwp'
+	OR option_name LIKE 'rss_%'
+	AND option_name != 'rss_language'
+	AND option_name != 'rss_use_excerpt'
+	AND option_name != 'rss_excerpt_lenght'
+)
+ORDER BY option_id;</code></pre>
+					</section>
+					<section>
+						<h3>Base de datos: wp_post</h3>
+						<pre style="font-size: 16px;"><code>SELECT *
+FROM wp_posts
+WHERE (
+	post_content LIKE '%iframe%'
+	OR post_content LIKE '%script%'
+	OR post_content LIKE '%noscript%'
+	OR post_content LIKE '%display: none%'
+	OR post_content LIKE '%visibility: hidden%'
+	OR post_content LIKE '%position: absolute%'
+	OR post_content LIKE '%hidden%'
+	OR post_content LIKE '%top: -%'
+	OR post_content LIKE '%bottom: -%'
+	OR post_content LIKE '%right: -%'
+	OR post_content LIKE '%left: -%'
+	OR post_content LIKE '%-9999px%'
+)
+ORDER BY ID;</code></pre>
+					</section>
+					<section>
+						<h3>Restaurar core</h3>
+						<p>Descargamos la versión exacta de nuestra página web desde la página oficial de WordPress.</p>
+						<p><a rel="nofollow" href="https://wordpress.org/download/release-archive/" target="_blank" title="Restaurar core">https://wordpress.org/download/release-archive/</a></p>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/version-wp-min.jpg" title="Restaurar core" alt="Restaurar core" />
+					</section>
+					<section>
+						<p>Eliminar todos los directorios y archivos de WordPress, menos la carpeta wp-content y wp-config.php</p>
+						<p>Descomprimir en otra ruta, nunca hacerlo en la carpeta raíz, ya que no queremos sobrescribir nada de wp-content y copiar todos los ficheros de la carpeta raíz y los directorios wp-admin y wp-includes.</p>
+						<blockquote>Nunca se debe descargar otra versión, puede generar problemas de incompatibilidad.</blockquote>
+					</section>
+					<section>
+						<h3>Restaurar plugins</h3>
+						<p>Verificar versión exacta de todos los plugins instalados.</p>
+						<a rel="nofollow" href="https://wordpress.org/plugins/wordfence/developers/" target="_blank" title="Restaurar plugins">https://wordpress.org/plugins/wordfence/developers/</a>
+						<p><strong>Nota:</strong> Esta sección no aparece en la página web en castellano.</p>
+					</section>
+					<section>
+						<h3>Buscar código malicioso</h3>
+						<p>No siempre será posible restaurar en producción una copia estable dada la actividad de nuestra página web o si se trata de un e-commerce.</p>
+						<p>Una de las tareas más difíciles y complicadas, es realizar una búsqueda manual del código malicioso. Para ello, disponemos de herramientas las cuales nos pueden ayudar a esta ardua tarea.</p>
+					</section>
+					<section>
+						<h3>Recursos web</h3>
+						<p>Google Search Console: <a rel="nofollow" href="https://www.google.com/webmasters/tools" target="_blank" title="Google Search Console">https://www.google.com/webmasters/tools</a></p>
+						<p>Google informe de transparencia: <a rel="nofollow" href="https://goo.gl/u3bR0x" target="_blank" title="Google informe de transparencia">https://goo.gl/u3bR0x</a></p>
+						<p>Sucuri Check: <a rel="nofollow" href="https://sitecheck.sucuri.net/" target="_blank" title="Sucuri Check">https://sitecheck.sucuri.net/</a></p>
+						<p>Crawler: <a rel="nofollow" href="https://www.screamingfrog.co.uk/" target="_blank" title="Crawler">https://www.screamingfrog.co.uk/</a></p>
+					</section>
+					<section>
+						<h3>Recursos apps</h3>
+						<p>DiffMerge: <a rel="nofollow" href="https://sourcegear.com/diffmerge/" target="_blank" title="DiffMerge">https://sourcegear.com/diffmerge/</a></p>
+						<p>Notepad++: <a rel="nofollow" href="https://notepad-plus-plus.org/" target="_blank" title="Notepad++">https://notepad-plus-plus.org/</a></p>
+						<p>Sublime: <a rel="nofollow" href="https://www.sublimetext.com/" target="_blank" title="Sublime">https://www.sublimetext.com/</a></p>
+					</section>
+					<section>
+						<p>Para la búsqueda de código malicioso, trabajaremos con la carpeta wp-content/themes, dado que el resto de archivos y directorios deberían estar limpios al restaurar el core y plugins.</p>
+					</section>
+					<section>
+						<p>Ejemplos patrones de búsqueda:</p>
+						<ul>
+							<li>base64_decode</li>
+							<li>eval(%</li>
+							<li>eval(base64%</li>
+							<li>eval(base64_decode%</li>
+							<li>header(‘Location%</li>
+							<li>&lt;script</li>
+							<li>&lt;iframe style=”width:0;height:0;”</li>
+							<li>Revisar todos los index.php que ocultan directorios</li>
+							<li>Revisar URL’s maliciosas según patrón detectado en Google Search Console.</li>
+							<li>...</li>
+						</ul >
+					</section>
+					<section>
+						<h3>Aplicar buenas prácticas</h3>
+						<p>Una vez finalizado todo el proceso de limpieza de malware en nuestro portal web. El último paso es aplicar buenas prácticas a nuestra página.</p>
+					</section>
+				</section>
+
+				<!-- Practical case -->
+				<section>
+					<h3>Caso práctico</h3>
+					<p>Descargar práctica:</p>
+					<p><a href="#" title="Archivo eliminado">jjpeleato.com/download/wp_error.zip</a></p>
+					<p>Guía limpiar WordPress:</p>
+					<p><a href="#" title="Documento eliminado">jjpeleato.com/download/wp_clean.pdf</a></p>
+				</section>
+
+				<!-- Thank you -->
+				<section>
+					<p class="h4">END!</p>
+					<p>Thank you very much!</p>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/merci.gif" title="Thank you very much!" alt="Thank you very much!">
+				</section>
+			</div>
+		</div>
+		<!-- Assets JS -->
+		<script src="assets/js/vendor/reveal.js"></script>
+		<script src="assets/js/vendor/notes.js"></script>
+		<script src="assets/js/vendor/markdown.js"></script>
+		<script src="assets/js/vendor/highlight.js"></script>
+		<script src="assets/js/vendor/zoom.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

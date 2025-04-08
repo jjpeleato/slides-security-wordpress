@@ -1,13 +1,13 @@
-# Slides: Starter boilerplate
+# Slides: WordPress Security
 
-Short or long description.
+Presentation made for a WordPress security workshop.
 
 ## Environment
 
-- LOCAL: http://web.slidesstarter.lndo.site/
+- LOCAL: http://web.securitywordpress.lndo.site/
 - DEV: ~
 - PRE: ~
-- PRO: ~
+- PRO: https://jjpeleato.com/courses/securitywordpress/
 
 ## Project
 
